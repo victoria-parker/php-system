@@ -9,6 +9,15 @@ function listarCategoria(){
     return $resultado;
 }
 
+#Agregar Categoria
+function agregarCategoria(){
+    $catNombre=$_POST['catNombre'];
+    $link=conectar();
+    $sql="INSERT INTO categorias (catNombre) value ('".$catNombre."')";
+    $resultado=mysqli_query($link,$sql) or die(mysqli_error($link));
+    return $resultado;
+}
+
 /**
  * listarCategorias()
  * verCategoriaPorId()
