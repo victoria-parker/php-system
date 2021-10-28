@@ -9,6 +9,15 @@
         return $resultado;
     }
 
+#Agregar Marca
+    function agregarMarca(){
+        $mkNombre=$_POST['mkNombre'];
+        $link=conectar();
+        $sql="insert into marcas set mkNombre='".$mkNombre."'";
+        $resultado=mysqli_query($link,$sql);
+        return $resultado;
+    }
+
 /**
  * listarMarcas()
  * verMarcaPorId()
