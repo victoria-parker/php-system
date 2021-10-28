@@ -21,7 +21,7 @@
             <th>Presentacion</th>
             <th>Imagen</th>
             <th colspan="2">
-                <a href="" class="btn btn-dark">Agregar</a>
+                <a href="formAgregarProducto.php" class="btn btn-dark">Agregar</a>
             </th>
         </tr>
         </thead>
