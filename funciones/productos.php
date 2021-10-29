@@ -51,7 +51,7 @@ function agregarProducto(){
                     ".$prdStock.",
                     '".$prdImagen."'
             )";
-    $resutado=mysqli_query($link,$sql) or die ($link);
+    $resultado=mysqli_query($link,$sql) or die ($link);
     return $resultado;
 }
 /**

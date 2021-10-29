@@ -18,6 +18,9 @@
                 <th>Email</th>
                 <th>Password</th>
                 <th>Estado</th>
+                <th colspan="2">
+                    <a href="formAgregarUsuario.php" class="btn btn-dark">Agregar</a>
+                </th>
             </tr>
             </thead>
             <tbody>
@@ -31,6 +34,12 @@
                 <td><?=$usuario['usuEmail']?></td>
                 <td><?=$usuario['usuPass']?></td>
                 <td><?=$usuario['usuEstado']?></td>
+                <td>
+                    <a href="" class="btn btn-outline-secondary">Modificar</a>
+                </td>
+                <td>
+                    <a href="" class="btn btn-outline-secondary">Eliminar</a>
+                </td>
             </tr>
             <?php
                 }
