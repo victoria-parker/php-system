@@ -3,13 +3,19 @@
 ##listar Productos
 function listarProductos(){
     $link=conectar();
-    $sql='SELECT idProducto, prdNombre, prdPrecio, productos.idMarca,mkNombre, productos.idCategoria,catNombre ,prdPresentacion, prdImagen from productos inner join `marcas` on productos.idMarca=marcas.idMarca inner join categorias on productos.idCategoria=categorias.idCategoria';
+    $sql='SELECT idProducto, prdNombre, prdPrecio, 
+          productos.idMarca,mkNombre, 
+          productos.idCategoria,catNombre ,
+          prdPresentacion,prdStock, prdImagen 
+          from productos 
+          inner join `marcas` on productos.idMarca=marcas.idMarca 
+          inner join categorias on productos.idCategoria=categorias.idCategoria ';
     $resultado=mysqli_query($link,$sql) or die(mysqli_error($link));
     return $resultado;
 }
 
 function subirImagen(){
-    ##predeterminado si no subre imagen
+    ##predeterminado si no sube imagen
     $prdImagen='noDisponible.jpg';
 
     #si enviaron archivo y esta bien
@@ -51,9 +57,25 @@ function agregarProducto(){
                     ".$prdStock.",
                     '".$prdImagen."'
             )";
-    $resultado=mysqli_query($link,$sql) or die ($link);
+    $resultado=mysqli_query($link,$sql) or die (mysqli_error($link));
     return $resultado;
 }
+
+function verProductoPorId(){
+    $idProducto=$_GET['idProducto'];
+    $link=conectar();
+    $sql="SELECT idProducto,prdNombre, prdPrecio, 
+          productos.idMarca,mkNombre, productos.idCategoria,
+          catNombre ,prdPresentacion, prdStock,prdImagen 
+          from productos 
+          inner join `marcas` on productos.idMarca=marcas.idMarca 
+          inner join categorias on productos.idCategoria=categorias.idCategoria 
+          WHERE idProducto=".$idProducto.";";
+    $resultado=mysqli_query($link,$sql) or die(mysqli_error($link));
+    $producto=mysqli_fetch_assoc($resultado);
+    return $producto;
+}
+
 /**
  * listarProductos()
  * verProductoPorId()

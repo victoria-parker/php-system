@@ -14,7 +14,7 @@
         $mkNombre=$_POST['mkNombre'];
         $link=conectar();
         $sql="insert into marcas set mkNombre='".$mkNombre."'";
-        $resultado=mysqli_query($link,$sql);
+        $resultado=mysqli_query($link,$sql) or die(mysqli_error($link));
         return $resultado;
     }
 

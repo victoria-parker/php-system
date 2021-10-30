@@ -1,6 +1,6 @@
 <?php
 require 'funciones/conexiones.php';
-require 'funciones/productos.php.php';
+require 'funciones/productos.php';
 $chequeo=agregarProducto();
 
 include 'includes/header.html';
