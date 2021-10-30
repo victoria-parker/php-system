@@ -15,8 +15,13 @@ function listarProductos(){
 }
 
 function subirImagen(){
-    ##predeterminado si no sube imagen
+    ##predeterminado si no sube imagen en agregar producto
     $prdImagen='noDisponible.jpg';
+
+    ##predeterminado si no sube imagen en modificar producto
+    if(isset($_POST['imagenActual'])){
+        $prdImagen=$_POST['imagenActual'];
+    }
 
     #si enviaron archivo y esta bien
 
@@ -76,6 +81,31 @@ function verProductoPorId(){
     return $producto;
 }
 
+function modificarProducto(){
+    $idProducto=$_POST['idProducto'];//que fue enviado con el input type hidden
+    $prdNombre=$_POST['prdNombre'];
+    $prdPrecio=$_POST['prdPrecio'];
+    $idMarca=$_POST['idMarca'];
+    $idCategoria=$_POST['idCategoria'];
+    $prdPresentacion=$_POST['prdPresentacion'];
+    $prdStock=$_POST['prdStock'];
+    $prdImagen=subirImagen();
+
+    $link=conectar();
+
+    $sql="UPDATE PRODUCTOS SET 
+                    prdNombre='".$prdNombre."',
+                    prdPrecio=".$prdPrecio.",
+                    idMarca=".$idMarca.",
+                    idCategoria=".$idCategoria.",
+                    prdPresentacion='".$prdPresentacion."',
+                    prdStock=".$prdStock.",
+                    prdImagen='".$prdImagen."'
+                    WHERE idProducto=".$idProducto.";";
+
+    $resultado=mysqli_query($link,$sql) or die(mysqli_error($link));
+    return $resultado;
+}
 /**
  * listarProductos()
  * verProductoPorId()

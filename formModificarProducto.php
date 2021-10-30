@@ -94,7 +94,9 @@
                     <input type="file" name="prdImagen" class="form-control-file" id="prdImagen">
                 </div>
 
-                //enviar el id del producto
+
+                <input type="hidden" value="<?=$producto['prdImagen']?>" name="imagenActual">
+
                 <input type="hidden" name="idProducto" value="<?=$producto['idProducto']?>">
 
                 <button class="btn btn-dark mr-3 px-4">Modificar producto</button>
