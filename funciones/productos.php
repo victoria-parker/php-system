@@ -8,7 +8,7 @@ function listarProductos(){
           productos.idCategoria,catNombre ,
           prdPresentacion,prdStock, prdImagen 
           from productos 
-          inner join `marcas` on productos.idMarca=marcas.idMarca 
+          inner join marcas on productos.idMarca=marcas.idMarca 
           inner join categorias on productos.idCategoria=categorias.idCategoria ';
     $resultado=mysqli_query($link,$sql) or die(mysqli_error($link));
     return $resultado;
@@ -73,7 +73,7 @@ function verProductoPorId(){
           productos.idMarca,mkNombre, productos.idCategoria,
           catNombre ,prdPresentacion, prdStock,prdImagen 
           from productos 
-          inner join `marcas` on productos.idMarca=marcas.idMarca 
+          inner join marcas on productos.idMarca=marcas.idMarca 
           inner join categorias on productos.idCategoria=categorias.idCategoria 
           WHERE idProducto=".$idProducto.";";
     $resultado=mysqli_query($link,$sql) or die(mysqli_error($link));
