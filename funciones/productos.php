@@ -106,6 +106,15 @@ function modificarProducto(){
     $resultado=mysqli_query($link,$sql) or die(mysqli_error($link));
     return $resultado;
 }
+
+function eliminarProducto(){
+    $idProducto=$_POST['idProducto'];
+    $link=conectar();
+    $sql="DELETE FROM PRODUCTOS WHERE idProducto=".$idProducto.";";
+
+    $resultado=mysqli_query($link,$sql) or die(mysqli_error($link));
+    return $resultado;
+}
 /**
  * listarProductos()
  * verProductoPorId()
