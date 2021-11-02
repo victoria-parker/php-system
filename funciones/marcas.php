@@ -25,7 +25,24 @@
         $sql="SELECT 1 FROM productos WHERE idMarca=".$idMarca; //select 1 porque no interesa listar, me importa la cantidad de rows que va a devolver
         $resultado=mysqli_query($link,$sql) or die(mysqli_error($link));
         $cantidad=mysqli_num_rows($resultado);
-        return $cantidad;
+        return $cantidad;//devuelve un integer
+    }
+// Ver marca por Id
+    function verMarcaPorId(){
+        $idMarca=$_GET['idMarca'];
+        $link=conectar();
+        $sql='SELECT idMarca, mkNombre FROM marcas WHERE idMarca='.$idMarca;
+        $resultado=mysqli_query($link,$sql) or die(mysqli_error($link));
+        $marca=mysqli_fetch_assoc($resultado);
+        return $marca;
+    }
+
+    function eliminarMarca(){
+        $idMarca=$_POST['idMarca'];
+        $link=conectar();
+        $sql='DELETE FROM MARCAS WHERE idMarca='.$idMarca;
+        $resultado=mysqli_query($link,$sql) or die(mysqli_error($link));
+        return $resultado;
     }
 /**
  * listarMarcas()
