@@ -52,10 +52,18 @@ function modificarUsuario(){
     $resultado=mysqli_query($link,$sql) or die(mysqli_error($link));
     return $resultado;
 }
+#Eliminar un usuario
+function eliminarUsuario(){
+    $idUsuario=$_POST['idUsuario'];
+    $link=conectar();
+    $sql="DELETE FROM usuarios WHERE idUsuario=".$idUsuario;
+    $resultado=mysqli_query($link,$sql) or die(mysqli_error($link));
+    return $resultado;
+}
 /**
  * listarUsuario() listo
  * verUsuarioPorId() listo
  * agregarUsuario() listo
- * modificarUsuario()
+ * modificarUsuario() listo
  * eliminarUsuario()
  */
