@@ -29,11 +29,32 @@ function agregarUsuario(){
 #Ver usuario por id
 function verUsuarioPorId(){
     $idUsuario=$_GET['idUsuario'];
+    $link=conectar();
+    $sql="SELECT idUsuario, usuNombre,usuApellido,usuEmail,usuPass FROM usuarios WHERE idUsuario=".$idUsuario;
+    $resultado=mysqli_query($link,$sql) or die(mysqli_error($link));
+    $usuario=mysqli_fetch_assoc($resultado);
+    return $usuario;
+}
+#Modificar Usuario
+function modificarUsuario(){
+    $idUsuario=$_POST['idUsuario'];
+    $usuNombre=$_POST['usuNombre'];
+    $usuApellido=$_POST['usuApellido'];
+    $usuEmail=$_POST['usuEmail'];
+    $usuPass=$_POST['usuPass'];
 
+    $link=conectar();
+    $sql="UPDATE usuarios SET usuNombre='".$usuNombre."',
+                              usuApellido='".$usuApellido."',
+                              usuEmail='".$usuEmail."',
+                              usuPass='".$usuPass."'
+           WHERE idUsuario=".$idUsuario;
+    $resultado=mysqli_query($link,$sql) or die(mysqli_error($link));
+    return $resultado;
 }
 /**
  * listarUsuario() listo
- * verUsuarioPorId()
+ * verUsuarioPorId() listo
  * agregarUsuario() listo
  * modificarUsuario()
  * eliminarUsuario()

@@ -16,7 +16,6 @@
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>Email</th>
-                <th>Password</th>
                 <th>Estado</th>
                 <th colspan="2">
                     <a href="formAgregarUsuario.php" class="btn btn-dark">Agregar</a>
@@ -32,7 +31,6 @@
                 <td><?=$usuario['usuNombre']?></td>
                 <td><?=$usuario['usuApellido']?></td>
                 <td><?=$usuario['usuEmail']?></td>
-                <td><?=$usuario['usuPass']?></td>
                 <td><?=$usuario['usuEstado']?></td>
                 <td>
                     <a href="formModificarUsuario.php?idUsuario=<?=$usuario['idUsuario']?>" class="btn btn-outline-secondary">Modificar</a>
