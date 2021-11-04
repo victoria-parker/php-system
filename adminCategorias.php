@@ -30,7 +30,7 @@
                         <a href="formModificarCategoria.php?idCategoria=<?=$categoria['idCategoria']?>" class="btn btn-outline-secondary">Modificar</a>
                     </td>
                     <td>
-                        <a href="" class="btn btn-outline-secondary">Eliminar</a>
+                        <a href="formEliminarCategoria.php?idCategoria=<?=$categoria['idCategoria']?>" class="btn btn-outline-secondary">Eliminar</a>
                     </td>
                 </tr>
             <?php
