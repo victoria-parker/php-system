@@ -8,7 +8,7 @@
 ?>
 
     <main class="container">
-        <h1>Alta de una nueva marca</h1>
+        <h1>Modificar una marca</h1>
         <div class="alert bg-light border p-3 col-8 mx-auto">
             <form action="modificarMarca.php" method="post">
                 Marca:<br>

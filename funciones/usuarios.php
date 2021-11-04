@@ -26,10 +26,15 @@ function agregarUsuario(){
     $resultado=mysqli_query($link,$sql) or die(mysqli_error($link));
     return $resultado;
 }
+#Ver usuario por id
+function verUsuarioPorId(){
+    $idUsuario=$_GET['idUsuario'];
+
+}
 /**
- * listarUsuario()
+ * listarUsuario() listo
  * verUsuarioPorId()
- * agregarUsuario()
+ * agregarUsuario() listo
  * modificarUsuario()
  * eliminarUsuario()
  */

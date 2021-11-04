@@ -35,7 +35,7 @@
                 <td><?=$usuario['usuPass']?></td>
                 <td><?=$usuario['usuEstado']?></td>
                 <td>
-                    <a href="" class="btn btn-outline-secondary">Modificar</a>
+                    <a href="formModificarUsuario.php?idUsuario=<?=$usuario['idUsuario']?>" class="btn btn-outline-secondary">Modificar</a>
                 </td>
                 <td>
                     <a href="" class="btn btn-outline-secondary">Eliminar</a>
