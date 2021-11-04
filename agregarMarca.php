@@ -20,6 +20,7 @@ include 'includes/nav.php';
         <div class="alert alert-<?=$clase?>">
             <?=$mensaje?>
         </div>
+        <a href="adminMarcas.php" class="btn btn-outline-secoundary">volver a panel</a>
     </main>
 
 <?php  include 'includes/footer.php';  ?>

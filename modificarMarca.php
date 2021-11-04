@@ -1,19 +1,19 @@
 <?php  
 	require 'funciones/conexiones.php';
-	require 'funciones/productos.php';
-	$chequeo=modificarProducto();
+	require 'funciones/marcas.php';
+	$chequeo=modificarMarca();
 	include 'includes/header.html';  
 	include 'includes/nav.php';  
 ?>
 
     <main class="container">
-        <h1>Modificación de un Producto</h1>
+        <h1>Modificación de una Marca</h1>
         <?php
         $clase='danger';
-        $mensaje='No se pudo modificar el producto';
+        $mensaje='No se pudo modificar la marca';
         if($chequeo){
             $clase='success';
-            $mensaje='Producto modificado correctamente';
+            $mensaje='Marca modificada correctamente';
         }
         ?>
         <div class="alert alert-<?=$clase?>">

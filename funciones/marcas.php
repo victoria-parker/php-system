@@ -36,7 +36,16 @@
         $marca=mysqli_fetch_assoc($resultado);
         return $marca;
     }
-
+//funcion modificar Marca
+    function modificarMarca(){
+        $idMarca=$_POST['idMarca'];
+        $mkNombre=$_POST['mkNombre'];
+        $link=conectar();
+        $sql="UPDATE marcas SET mkNombre='".$mkNombre."' WHERE idMarca=".$idMarca;
+        $resultado=mysqli_query($link,$sql) or die(mysqli_error($link));
+        return $resultado;
+    }
+//funcion Eliminar Marca
     function eliminarMarca(){
         $idMarca=$_POST['idMarca'];
         $link=conectar();
@@ -44,10 +53,11 @@
         $resultado=mysqli_query($link,$sql) or die(mysqli_error($link));
         return $resultado;
     }
+
 /**
- * listarMarcas()
- * verMarcaPorId()
- * agregarMarca()
+ * listarMarcas() listo
+ * verMarcaPorId() listo
+ * agregarMarca() listo
  * modificarMarca()
- * eliminarMarca()
+ * eliminarMarca()listo
  */

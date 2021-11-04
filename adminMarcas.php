@@ -29,7 +29,7 @@
                 <td><?=$marca['idMarca']?></td>
                 <td><?=$marca['mkNombre']?></td>
                 <td>
-                    <a href="" class="btn btn-outline-secondary">Modificar</a>
+                    <a href="formModificarMarca.php?idMarca=<?=$marca['idMarca']?>" class="btn btn-outline-secondary">Modificar</a>
                 </td>
                 <td>
                     <a href="formEliminarMarca.php?idMarca=<?=$marca['idMarca']?>" class="btn btn-outline-secondary">Eliminar</a>
