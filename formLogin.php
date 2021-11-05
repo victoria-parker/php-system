@@ -1,4 +1,5 @@
-<?php  
+<?php
+    require 'config/config.php';
     //aca no se pone el autenticar porque sino no te dejaria nunca ingresar
 	include 'includes/header.html';  
 	include 'includes/nav.php';  
