@@ -10,6 +10,7 @@
         <a class="py-2" href="adminProductos.php">Productos</a>
         <a class="py-2" href="adminUsuarios.php">Usuarios</a>
 <?php
+//si esta logueado
 if(isset($_SESSION['login'])){
 ?>
 
@@ -19,11 +20,12 @@ if(isset($_SESSION['login'])){
             </a>
         </button>
             <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item bg-dark" href="logout.php">Salir de sistema</a>
                 <a class="dropdown-item bg-dark" href="">Modificar Perfil</a>
                 <a class="dropdown-item bg-dark" href="">Cambiar contraseña</a>
+                <a class="dropdown-item bg-dark" href="logout.php">Salir de sistema</a>
             </div>
 <?php
+    //si no esta logueado
 }else{
 ?>
 

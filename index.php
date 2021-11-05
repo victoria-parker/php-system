@@ -1,4 +1,5 @@
-<?php  
+<?php
+    require 'config/config.php';
 	require 'funciones/conexiones.php';
 	require 'funciones/productos.php';
 	$productos=listarProductos();
@@ -27,7 +28,6 @@
                 <div class="lead text-info">
                 $<?=$producto['prdPrecio']?>
                 </div>
-                <button class="btn btn-info btn-block">ver Detalle</button>
             </div>
 <?php
     }

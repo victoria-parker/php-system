@@ -1,10 +1,13 @@
 <?php
-require 'funciones/conexiones.php';
-require 'funciones/marcas.php';
-$chequeo=agregarMarca();
+    require 'config/config.php';
+    require 'funciones/autenticacion.php';
+    autenticar();
+    require 'funciones/conexiones.php';
+    require 'funciones/marcas.php';
+    $chequeo=agregarMarca();
 
-include 'includes/header.html';
-include 'includes/nav.php';
+    include 'includes/header.html';
+    include 'includes/nav.php';
 ?>
 
     <main class="container">

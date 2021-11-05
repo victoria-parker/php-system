@@ -1,4 +1,8 @@
 <?php
+    require 'config/config.php';
+    require 'funciones/autenticacion.php';
+    autenticar();
+
     require 'funciones/conexiones.php';
 	require 'funciones/marcas.php';
 	$marcas=listarMarca();

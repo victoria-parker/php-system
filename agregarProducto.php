@@ -1,10 +1,13 @@
 <?php
-require 'funciones/conexiones.php';
-require 'funciones/productos.php';
-$chequeo=agregarProducto();
+    require 'config/config.php';
+    require 'funciones/autenticacion.php';
+    autenticar();
+    require 'funciones/conexiones.php';
+    require 'funciones/productos.php';
+    $chequeo=agregarProducto();
 
-include 'includes/header.html';
-include 'includes/nav.php';
+    include 'includes/header.html';
+    include 'includes/nav.php';
 ?>
 
     <main class="container">
