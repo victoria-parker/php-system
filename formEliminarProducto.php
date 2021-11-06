@@ -34,7 +34,7 @@
                     <form action="eliminarProducto.php" method="post">
                         <input type="hidden" name="idProducto" value="<?=$producto['idProducto']?>">
                         <button class="btn btn-danger btn-block my-2">Confirmar Baja</button>
-                        <a href="adminProductos.php" class="btn btn-outline-secondady btn-block">Volver al panel</a>
+                        <a href="adminProductos.php" class="btn btn-outline-secondary btn-block">Volver al panel</a>
                     </form>
                 </div>
             </div>
