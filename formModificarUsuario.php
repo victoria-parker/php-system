@@ -10,7 +10,7 @@
 ?>
 
     <main class="container">
-        <h1>Alta de un nuevo Usuario</h1>
+        <h1>Modificacion de datos de un Usuario</h1>
         <div class="alert bg-light border p-3 col-8 mx-auto">
             <form action="modificarUsuario.php" method="post">
                 Nombre de usuario:<br>
